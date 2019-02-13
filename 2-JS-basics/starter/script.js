@@ -255,10 +255,60 @@ yearsUntilRetirement(1954, 'Mary');
 
 // ******* Function Statements and Expressions
 
+// Function declaration
+// function whatDoYouDo(job, firstName){}
+
+// Function expression
+var whatDoYouDo = function(job, firstName) {
+    switch (job) {
+        case 'teacher':
+            return firstName + ' teaches kids how to code'; // Do not need to break;
+        case 'driver':
+            return firstName + ' drives a cab in Lisbon.';
+        case 'designer':
+            return firstName + ' designs beautiful websites';
+        default:
+            return firstName + ' does something else';
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('retired', 'Mark'));
 
 
+// ************************************************
+// ******* Arrays ******************************
+// ************************************************
 
+// Initialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1984, 1954, 1952);
 
+console.log(names);
+console.log(names.length); // how many elements 
+
+// Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+// Different data types
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+john.push('blue'); // add to array last seat
+john.unshift('Mr.'); // add to array first seat
+console.log(john);
+
+john.pop(); // remove last seat from array
+john.pop();
+john.shift(); // remove first seat from array
+console.log(john);
+
+console.log(john.indexOf(23)); // return (-1) if item is not in array
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
 
 
 
